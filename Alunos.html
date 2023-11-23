@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição Alunos</title>
+    <style>
+        body{
+            background-color: #076774;
+            padding: 40px;
+        }
+
+        .informacoes{
+            margin: 0 auto;
+            max-width: 400px;
+            min-width: 200px;
+            list-style: none;
+            flex-direction: column;
+        }
+
+        div{
+            padding: 10px;
+            background-color: #18D8F2;
+            width: 7vw;
+            display: flex;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        .item div {
+            flex-basis: 100px;
+            flex-shrink: 0;
+        }
+
+        li{
+            display: flex;
+            flex-direction: row;
+            background-color: #18D8F2;
+            height: 16vh;
+            border-bottom: 2px solid lightgray;
+        }
+        main {
+            flex-grow: 1;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        nav {
+            color: gray;
+            font: 16px;
+        }
+
+        .item {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ul class="informacoes">
+        <li class="item">
+            <div>
+                <!--img-->
+            </div>
+            <main>
+                <strong>Adriely Mendes</strong>
+                <nav>2440911</nav>
+                <nav>16/06/2006</nav>
+            </main>
+        </li>
+        <li class="item">
+            <div>
+                <!--img-->
+            </div>
+            <main>
+                <strong>Agatha dos Santos Pinheiros</strong>
+                <nav>2440920</nav>
+                <nav>08/09/2006</nav>
+            </main>
+        </li>
+        <li class="item">
+            <div>
+                <!--img-->
+            </div>
+            <main>
+                <strong>Hellen Luiza Poeschke</strong>
+                <nav>2441055</nav>
+                <nav>29/07/2005</nav>
+            </main>
+        </li>
+        <li class="item">
+            <div>
+                <!--img-->
+            </div>
+            <main>
+                <strong>Natalia de Lima Mathias</strong>
+                <nav>2441136</nav>
+                <nav>20/03/2007</nav>
+            </main>
+        </li>
+    </ul>
+
+</body>
+</html>
