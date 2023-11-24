@@ -5,43 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descrição Alunos</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body{
-            background-color: #076774;
+            background-color: #32C0C3;
             padding: 40px;
         }
-
+        h1{
+            color: #004C52;
+        }
         .informacoes{
             margin: 0 auto;
-            max-width: 400px;
-            min-width: 200px;
+            width: 400px;
+            height: 200px;
             list-style: none;
             flex-direction: column;
         }
-
         div{
             padding: 10px;
-            background-color: #18D8F2;
+            background-color: #8DE1E2;
             width: 7vw;
             display: flex;
+            border-radius: 10px;
         }
-
-        img {
+        img{
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
         }
-
-        .item div {
-            flex-basis: 100px;
-            flex-shrink: 0;
-        }
-
         li{
             display: flex;
             flex-direction: row;
-            background-color: #18D8F2;
+            background-color: #8DE1E2;
             height: 16vh;
             border-bottom: 2px solid lightgray;
+            border-radius: 10px;
         }
-        main {
+        main{
             flex-grow: 1;
             font-size: 18px;
             display: flex;
@@ -49,22 +52,21 @@
             align-items: start;
             justify-content: center;
         }
-
-        nav {
+        nav{
             color: gray;
             font: 16px;
         }
-
-        .item {
-            border: 1px solid black;
+        .item{
+            border: 1px solid #00727A;
         }
     </style>
 </head>
 <body>
+    <h1>Descrição dos Alunos</h1>
     <ul class="informacoes">
         <li class="item">
             <div>
-                <!--img-->
+                <img src="./Imagens/Foto_Adriely.jpg" alt="">
             </div>
             <main>
                 <strong>Adriely Mendes</strong>
@@ -74,7 +76,7 @@
         </li>
         <li class="item">
             <div>
-                <!--img-->
+                <img src="./Imagens/Foto_Agatha.png" alt="">
             </div>
             <main>
                 <strong>Agatha dos Santos Pinheiros</strong>
@@ -84,7 +86,7 @@
         </li>
         <li class="item">
             <div>
-                <!--img-->
+                <img src="./Imagens/Foto_Hellen.jpg" alt="">
             </div>
             <main>
                 <strong>Hellen Luiza Poeschke</strong>
@@ -94,7 +96,7 @@
         </li>
         <li class="item">
             <div>
-                <!--img-->
+                <img src="./Imagens/Foto_Nati.jpg" alt="">
             </div>
             <main>
                 <strong>Natalia de Lima Mathias</strong>
