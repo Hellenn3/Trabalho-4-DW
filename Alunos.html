@@ -24,23 +24,18 @@
             list-style: none;
             flex-direction: column;
         }
-        div{
-            padding: 10px;
-            background-color: #8DE1E2;
-            width: 7vw;
-            display: flex;
-            border-radius: 10px;
-        }
-        img{
+        img.avatar{
             width: 90px;
             height: 90px;
+            object-fit: cover;
+            object-position: center center;
             border-radius: 50%;
         }
         li{
             display: flex;
             flex-direction: row;
             background-color: #8DE1E2;
-            height: 16vh;
+           
             border-bottom: 2px solid lightgray;
             border-radius: 10px;
         }
@@ -51,32 +46,15 @@
             flex-direction: column;
             align-items: start;
             justify-content: center;
+            margin-left: 5px;
         }
         nav{
             color: gray;
             font: 14px;
         }
-        .item{
+        li.item{
             border: 1px solid #00727A;
-        }
-         @media only screen and (max-width: 600px) {
-            /* Adicione estilos para telas com largura máxima de 600 pixels (ajuste conforme necessário) */
-            body {
-                padding: 20px; /*Ajustar o preenchimento para telas menores */
-            }
-
-            .informacoes {
-                width: 100%; /* Deixe a lista em largura total em telas menores */
-            }
-
-            li {
-                height: auto; /* Ajuste a altura de cada item da lista em telas menores */
-            }
-
-            img {
-                width: 60px; /* Ajuste o tamanho da imagem para telas menores*/
-                height: 60px;
-            }
+            padding: 5px;
         }
     </style>
 </head>
@@ -84,9 +62,7 @@
     <h1>Descrição dos Alunos</h1>
     <ul class="informacoes">
         <li class="item">
-            <div>
-                <img src="./Imagens/Foto_Adriely.jpg" alt="">
-            </div>
+            <img class="avatar" src="./Imagens/Foto_Adriely.jpg" alt="">
             <main>
                 <strong>Adriely Mendes</strong>
                 <nav>2440911</nav>
@@ -94,9 +70,7 @@
             </main>
         </li>
         <li class="item">
-            <div>
-                <img src="./Imagens/Foto_Agatha.jpg" alt="">
-            </div>
+            <img class="avatar" src="./Imagens/Foto_Agatha.jpg" alt="">
             <main>
                 <strong>Agatha dos Santos Pinheiro</strong>
                 <nav>2440920</nav>
@@ -104,9 +78,7 @@
             </main>
         </li>
         <li class="item">
-            <div>
-                <img src="./Imagens/Foto_Hellen.jpg" alt="">
-            </div>
+            <img class="avatar" src="./Imagens/Foto_Hellen.jpg" alt="">
             <main>
                 <strong>Hellen Luiza Poeschke</strong>
                 <nav>2441055</nav>
@@ -114,9 +86,7 @@
             </main>
         </li>
         <li class="item">
-            <div>
-                <img src="./Imagens/Foto_Mavi.jpg" alt="">
-            </div>
+            <img class="avatar" src="./Imagens/Foto_Mavi.jpg" alt="">
             <main>
                 <strong>Maria Victoria Espaziano</strong>
                 <nav>2441101</nav>
@@ -124,9 +94,7 @@
             </main>
         </li>
         <li class="item">
-            <div>
-                <img src="./Imagens/Foto_Nati.jpg" alt="">
-            </div>
+            <img class="avatar" src="./Imagens/Foto_Nati.jpg" alt="">
             <main>
                 <strong>Natalia de Lima Mathias</strong>
                 <nav>2441136</nav>
