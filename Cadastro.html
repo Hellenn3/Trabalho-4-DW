@@ -10,26 +10,124 @@
             padding: 0;
             box-sizing: border-box;
         }
-        img{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            background-size: cover;
+       img{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
 
        }
        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             width: 100vw;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            background-image: url("Imagens/Biblioteca.jpg");
+            background-size: cover;
+    
         }
+        .container{
+            width: 600px;
+            height: 615px;
+            border-radius: 5px;
+            background-color:#cc9966;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 20px;
+            padding: 20px;
+            
+            
+        }
+
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           border-bottom:  solid ;
+           padding-bottom: 10px;
+           margin-bottom: 20px;
+        }
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between ;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        label{
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        input{
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width:calc(48%-5px);
+        }
+
+        input[type="submit"]{
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            width: 80%;
+        }
+
+        
        
 
     </style>
 </head>
 <body>
-    <!-- <img src="./Imagens/Biblioteca.jpg" alt=""> -->
+   
+   
+    <div class="container">
+         <h1>Cadastro Usuários </h1>
+         <form action="#" method="get">
+            <label for="snome_id">Nome:</label>
+            <input type="text" name="seunome" id="snome_id" placeholder="Digite seu Nome" required>
+
+            <label for="Telefone_id">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone_id" placeholder="Digite seu Telefone" required>
+
+            <label for="cpf_id">CPF:</label>
+            <input type="text" name="cpf" id="cpf_id" placeholder="Digite seu CPF" required>
+
+            <label for="data_id">Data de Nascimento:</label>
+            <input type="date" name="data_nascimento" id="data_id" required>
+
+            <label for="email_id">E-mail:</label>
+            <input type="email" name="email" id="email_id" placeholder="Digite seu E-mail" required>
+
+            <label for="senha_id">Senha:</label>
+            <input type="password" name="senha" id="senha_id" placeholder="Digite sua senha" required>
+
+            <label for="endereco_id">Endereço:</label>
+            <input type="text" name="endereco" id="senha_id" placeholder="Digite sua Endereço" required>
+
+            <label for="cep_id">CEP:</label>
+            <input type="text" name="cep" id="cep_id" placeholder="Digite seu CEP" required>
+
+            <input type="submit" value="Cadastrar ">
+
+
+
+
+
+
+
+
+         </form>
+
+
+        
+        
+    </div>
+
+   
     
 
 </body>
