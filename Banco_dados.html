@@ -19,6 +19,7 @@
         .content {
             display: flex;
             flex-direction: column; 
+            justify-content: center;
             align-items: center;
         }
 
@@ -26,7 +27,8 @@
             max-width: 50%;
             padding: 20px;
             box-sizing: border-box;
-            text-align: justify; 
+            display: flex;
+            flex-direction: column;
             color: white; 
         }
 
@@ -34,7 +36,7 @@
             margin-top: 0; 
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
-            color: #8DE1E2;
+            color: #0c3535;
         }
 
         .text p {
@@ -48,7 +50,7 @@
             margin-top: 20px;
         }
 
-        img {
+        img{
             width: 100%;
             height: auto;
             display: block;
@@ -58,7 +60,8 @@
             justify-content: flex-end;
         }
         a{
-            color: #32C0C3;
+            font-family: 'Times New Roman', Times, serif;
+            color: #0c3535;
         }
     </style>
 </head>
@@ -66,13 +69,15 @@
     <div class="content">
         <div class="text">
             <h1>Biblioteca</h1>
-            <p>Nosso Banco de Dados é uma biblioteca e ele possui 7 tabelas, entre elas as tabelas: usuários, funcionários, empréstimos, livros, editor, autores, editora. Nessas tabelas estão armazenados os dados da nossa biblioteca. Nosso grupo pensou em fazer uma biblioteca, pois em uma biblioteca temos muitos dados que devem ser armazenados. Para fazer esse banco de dados, pensamos no que uma biblioteca precisava para se organizar, levantamos os dados e fizemos nosso Banco de Dados.</p>
+            <p>Nosso Banco de Dados é uma biblioteca e ele possui 7 tabelas, entre elas as tabelas: Usuários, funcionários, empréstimos, livros, editor, autores, editora. Nessas tabelas estão armazenados os dados da nossa biblioteca. Nosso grupo pensou em fazer uma biblioteca, pois em uma biblioteca temos muitos dados que devem ser armazenados. Para fazer esse banco de dados, pensamos no que uma biblioteca precisava para se organizar, levantamos os dados e fizemos nosso Banco de Dados.</p>
         </div>
         <div class="image">
             <img src="Imagens/WhatsApp Image 2023-10-10 at 20.27.00.jpeg" alt="">
         </div>
-        <div>
-            <a href="Cadastro.html"></a>
+        <div class="link">
+            <a href="Cadastro.html">
+                <strong>Próxima página</strong>
+            </a>
         </div>
     </div>
 </body>
