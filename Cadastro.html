@@ -77,6 +77,26 @@
             color: white;
             cursor: pointer;
         }
+        /* Estilos de modo light */
+        body.light-mode {
+            background-image: url("Imagens/Biblioteca.jpg");
+            background-color: #fff;
+            color: #000;
+        }
+        /* Estilos de modo dark */
+        body.dark-mode {
+            background-image: url("Imagens/Biblioteca.jpg");
+            background-color: #333;
+            color: #fff;
+        }
+        /* Alternar estilos de botão */
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
         .menu-toggle{
             display: none;
             cursor: pointer;
@@ -120,39 +140,80 @@
 
     </style>
 </head>
-<body>
-     <h1>Cadastro Usuários </h1>
-        </div>
-        <div>
-            <form action="#" method="get">
-                <label for="snome_id">Nome:</label>
-                <input type="text" name="seunome" id="snome_id" placeholder="Digite seu Nome">
+<body class="light-mode">
+    </div class="container">
+        <h1>Cadastro Usuários </h1>
+            <div>
+                <form action="#" method="get">
+                    <label for="snome_id">Nome:</label>
+                    <input type="text" name="seunome" id="snome_id" placeholder="Digite seu Nome">
     
-                <label for="Telefone_id">Telefone:</label>
-                <input type="tel" name="telefone" id="telefone_id" placeholder="Digite seu Telefone">
+                    <label for="Telefone_id">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone_id" placeholder="Digite seu Telefone">
     
-                <label for="cpf_id">CPF:</label>
-                <input type="text" name="cpf" id="cpf_id" placeholder="Digite seu CPF">
+                    <label for="cpf_id">CPF:</label>
+                    <input type="text" name="cpf" id="cpf_id" placeholder="Digite seu CPF">
     
-                <label for="data_id">Data de Nascimento:</label>
-                <input type="date" name="data_nascimento" id="data_id">
+                    <label for="data_id">Data de Nascimento:</label>
+                    <input type="date" name="data_nascimento" id="data_id">
     
-                <label for="email_id">E-mail:</label>
-                <input type="email" name="email" id="email_id" placeholder="Digite seu E-mail">
+                    <label for="email_id">E-mail:</label>
+                    <input type="email" name="email" id="email_id" placeholder="Digite seu E-mail">
     
-                <label for="senha_id">Senha:</label>
-                <input type="password" name="senha" id="senha_id" placeholder="Digite sua senha">
+                        <label for="senha_id">Senha:</label>
+                    <input type="password" name="senha" id="senha_id" placeholder="Digite sua senha">
     
-                <label for="endereco_id">Endereço:</label>
-                <input type="text" name="endereco" id="senha_id" placeholder="Digite sua Endereço">
+                    <label for="endereco_id">Endereço:</label>
+                    <input type="text" name="endereco" id="senha_id" placeholder="Digite sua Endereço">
     
-                <label for="cep_id">CEP:</label>
-                <input type="text" name="cep" id="cep_id" placeholder="Digite seu CEP">
+                    <label for="cep_id">CEP:</label>
+                    <input type="text" name="cep" id="cep_id" placeholder="Digite seu CEP">
     
-                <input type="submit" value="Cadastrar ">
-            </form>
+                    <input type="submit" value="Cadastrar ">
+                </form id="cadastroForm">
+            </div>
         </div>
 
-    </div>
+    <script>
+        // JavaScript para alternar entre os modos claro e escuro
+        const body = document.body;
+        const toggleBtn = document.createElement('div');
+        toggleBtn.className = 'toggle-btn';
+        toggleBtn.textContent = 'Alternar Modos';
+        document.body.appendChild(toggleBtn);
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("cadastroForm");
+            const submit = document.getElementById("Cadastrar");
+        
+            submit.addEventListener("click", function (e) {
+                e.preventDefault(); 
+        
+                const nameInput = document.getElementById("name_id");
+                const emailInput = document.getElementById("email_id");
+                const passwordInput = document.getElementById("passaword_id");
+        
+                const name = nameInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+        
+                if (name === "" || email === "" || password === "") {
+                    alert("Todos os campos devem ser preenchidos.");
+                } else if (password.length < 8) {
+                    alert("A senha deve ter pelo menos 8 caracteres.");
+                } else {
+                    alert("Cadastro realizado.");
+                    nameInput.value = "";
+                    emailInput.value = "";
+                    passwordInput.value = "";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
