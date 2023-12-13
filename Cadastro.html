@@ -4,54 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <style>
+    
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        img{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
 
+       img{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            width: 100vw;
-            height: 100vh;
+       
+       body {
+            font-family:'Roboto',sans-serif;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-image: url("Imagens/Biblioteca.jpg");
             background-size: cover;
-    
         }
+
         .container{
-            width: 600px;
-            height: 615px;
+            width: 90%;
+            height: 600px;
             border-radius: 5px;
             background-color:#cc9966;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 20px;
-            padding: 20px;
+            justify-content: column;
+            align-items: center;
+            margin: 30px;
+            padding: 30px;  
         }
 
         h1{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            border-bottom:  solid ;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+           font-family:'gstatic',sans-serif;
+           border-bottom:  solid #fff ;
+           padding-bottom: 10px;
+           margin-bottom: 20px;
+           justify-content: center;
+           align-items: flex-start;
+           margin: 20px;
+           padding: 20px;
         }
 
         form{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:space-between ;
             width: 100%;
-            max-width: 600px;
         }
 
         label{
@@ -63,54 +68,152 @@
             margin-bottom: 10px;
             padding: 8px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            width:calc(48%-5px);
+            border-radius: 3px;
+            width:100%;
         }
 
         input[type="submit"]{
             background-color: #4caf50;
             color: white;
             cursor: pointer;
-            width: 80%;
         }
+        /* Estilos de modo light */
+        body.light-mode {
+            background-image: url("Imagens/Biblioteca.jpg");
+            background-color: #fff;
+            color: #000;
+        }
+        /* Estilos de modo dark */
+        body.dark-mode {
+            background-image: url("Imagens/Biblioteca.jpg");
+            background-color: #333;
+            color: #fff;
+        }
+        /* Alternar estilos de botão */
+        .toggle-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .menu-toggle{
+            display: none;
+            cursor: pointer;
+        }
+        .menu{
+            display: flex;
+            list-style: none;
+            margin-top: 20px;
+        }
+        .menu li{
+            margin-right: 20px;
+        }
+        @media only screen and
+        (max-width:600px){
+            .container{
+                margin: 10px;
+                padding: 20px;
+            }
+            input{
+            width: calc(100%-16px);
+        }
+
+        .menu{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-toggle{
+            display: block;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        .menu.active{
+            display: flex;
+        }
+    }
+
     </style>
 </head>
-<body>
-   
-   
-    <div class="container">
-        <div>
-            <h1>Cadastro Usuários </h1>
+<body class="light-mode">
+    </div class="container">
+        <h1>Cadastro Usuários </h1>
+            <div>
+                <form action="#" method="get">
+                    <label for="snome_id">Nome:</label>
+                    <input type="text" name="seunome" id="snome_id" placeholder="Digite seu Nome">
+    
+                    <label for="Telefone_id">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone_id" placeholder="Digite seu Telefone">
+    
+                    <label for="cpf_id">CPF:</label>
+                    <input type="text" name="cpf" id="cpf_id" placeholder="Digite seu CPF">
+    
+                    <label for="data_id">Data de Nascimento:</label>
+                    <input type="date" name="data_nascimento" id="data_id">
+    
+                    <label for="email_id">E-mail:</label>
+                    <input type="email" name="email" id="email_id" placeholder="Digite seu E-mail">
+    
+                        <label for="senha_id">Senha:</label>
+                    <input type="password" name="senha" id="senha_id" placeholder="Digite sua senha">
+    
+                    <label for="endereco_id">Endereço:</label>
+                    <input type="text" name="endereco" id="senha_id" placeholder="Digite sua Endereço">
+    
+                    <label for="cep_id">CEP:</label>
+                    <input type="text" name="cep" id="cep_id" placeholder="Digite seu CEP">
+    
+                    <input type="submit" value="Cadastrar ">
+                </form id="cadastroForm">
+            </div>
         </div>
-        <div>
-            <form action="#" method="get">
-                <label for="snome_id">Nome:</label>
-                <input type="text" name="seunome" id="snome_id" placeholder="Digite seu Nome">
-    
-                <label for="Telefone_id">Telefone:</label>
-                <input type="tel" name="telefone" id="telefone_id" placeholder="Digite seu Telefone">
-    
-                <label for="cpf_id">CPF:</label>
-                <input type="text" name="cpf" id="cpf_id" placeholder="Digite seu CPF">
-    
-                <label for="data_id">Data de Nascimento:</label>
-                <input type="date" name="data_nascimento" id="data_id">
-    
-                <label for="email_id">E-mail:</label>
-                <input type="email" name="email" id="email_id" placeholder="Digite seu E-mail">
-    
-                <label for="senha_id">Senha:</label>
-                <input type="password" name="senha" id="senha_id" placeholder="Digite sua senha">
-    
-                <label for="endereco_id">Endereço:</label>
-                <input type="text" name="endereco" id="senha_id" placeholder="Digite sua Endereço">
-    
-                <label for="cep_id">CEP:</label>
-                <input type="text" name="cep" id="cep_id" placeholder="Digite seu CEP">
-    
-                <input type="submit" value="Cadastrar ">
-            </form>
-        </div>
-    </div>
+
+    <script>
+        // JavaScript para alternar entre os modos claro e escuro
+        const body = document.body;
+        const toggleBtn = document.createElement('div');
+        toggleBtn.className = 'toggle-btn';
+        toggleBtn.textContent = 'Alternar Modos';
+        document.body.appendChild(toggleBtn);
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("cadastroForm");
+            const submit = document.getElementById("Cadastrar");
+        
+            submit.addEventListener("click", function (e) {
+                e.preventDefault(); 
+        
+                const nameInput = document.getElementById("name_id");
+                const emailInput = document.getElementById("email_id");
+                const passwordInput = document.getElementById("passaword_id");
+        
+                const name = nameInput.value.trim();
+                const email = emailInput.value.trim();
+                const password = passwordInput.value;
+        
+                if (name === "" || email === "" || password === "") {
+                    alert("Todos os campos devem ser preenchidos.");
+                } else if (password.length < 8) {
+                    alert("A senha deve ter pelo menos 8 caracteres.");
+                } else {
+                    alert("Cadastro realizado.");
+                    nameInput.value = "";
+                    emailInput.value = "";
+                    passwordInput.value = "";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
