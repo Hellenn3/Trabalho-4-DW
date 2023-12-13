@@ -4,56 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <style>
+    
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
        img{
         width: 100vw;
         height: 100vh;
         display: flex;
-
        }
+       
        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            width: 100vw;
-            height: 100vh;
+            font-family:'Roboto',sans-serif;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-image: url("Imagens/Biblioteca.jpg");
             background-size: cover;
-    
         }
+
         .container{
-            width: 600px;
-            height: 615px;
+            width: 90%;
+            height: 600px;
             border-radius: 5px;
             background-color:#cc9966;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            margin: 20px;
-            padding: 20px;
-            
-            
+            justify-content: column;
+            align-items: center;
+            margin: 30px;
+            padding: 30px;  
         }
 
         h1{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-           border-bottom:  solid ;
+           font-family:'gstatic',sans-serif;
+           border-bottom:  solid #fff ;
            padding-bottom: 10px;
            margin-bottom: 20px;
         }
 
         form{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:space-between ;
             width: 100%;
-            max-width: 600px;
         }
 
         label{
@@ -66,24 +65,63 @@
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 3px;
-            width:calc(48%-5px);
+            width:100%;
         }
 
         input[type="submit"]{
             background-color: #4caf50;
             color: white;
             cursor: pointer;
-            width: 80%;
         }
 
-        
-       
+        .menu-toggle{
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu{
+            display: flex;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .menu li{
+            margin-right: 20px;
+        }
+
+        @media only screen and
+        (max-width:600px){
+            .container{
+                margin: 10px;
+                padding: 20px;
+            }
+            input{
+            width: calc(100%-16px);
+        }
+
+        .menu{
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu-toggle{
+            display: block;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        .menu.active{
+            display: flex;
+        }
+    }
 
     </style>
 </head>
 <body>
-   
-   
+      
     <div class="container">
          <h1>Cadastro Usuários </h1>
          <form action="#" method="get">
@@ -113,22 +151,8 @@
 
             <input type="submit" value="Cadastrar ">
 
-
-
-
-
-
-
-
          </form>
-
-
-        
         
     </div>
-
-   
-    
-
 </body>
 </html>
