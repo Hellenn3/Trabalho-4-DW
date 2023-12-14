@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
         *{
             margin: 0;
             padding: 0;
@@ -16,7 +16,7 @@
         img{
             width: 100vw;
             height: 100vh;
-       }
+        }
        
         body{
             color: #010113;
@@ -66,7 +66,6 @@
         }
 
         input[type="submit"] {
-            
             background-color: #2e1904;
             border: 1px solid #2e1904;
             color: #fff;
@@ -84,17 +83,22 @@
         /* Estilos de modo dark */
         body.dark-mode {
             background-image: url("Imagens/Biblioteca.jpg");
-            background-color: #333;
+            background-color: #010113;
+            font-family: 'gstation', sans-serif;
             color: #fff;
         }
 
         /* Alternar estilos de botão */
-        .toggle-btn {
+        .toggle-btn{
             position: fixed;
             top: 10px;
             right: 10px;
             cursor: pointer;
             z-index: 1000;
+        }
+
+        body.dark-mode .toggle-btn {
+            color: #2e1904;
         }
 
         .menu-toggle {
@@ -139,6 +143,17 @@
             .menu.active {
                 display: flex;
             }
+        }
+
+        .link {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: auto;
+            padding: 10px;
+        }
+
+        a{
+            color: #fff;
         }
 
     </style>
@@ -211,6 +226,12 @@
                 <input type="submit" value="Cadastrar">
             </form> 
         </div>
+    </div>
+
+    <div class="link">
+        <a href="Alunos.html">
+            <strong>Volte a página inicial</strong>
+        </a>
     </div>
 
     <script>
